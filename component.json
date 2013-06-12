@@ -1,0 +1,15 @@
+{
+  "name": "grunt-auditfs",
+  "repo": "codeactual/grunt-auditfs",
+  "description": "Verify build file/directory properties and content with audit-fs",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "component/each": "2b33467"
+  },
+  "main": "lib/component/main.js",
+  "scripts": [
+    "lib/component/main.js"
+  ],
+  "license": "MIT"
+}

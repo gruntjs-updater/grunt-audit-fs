@@ -1,0 +1,55 @@
+{
+  "name": "grunt-auditfs",
+  "description": "Verify build file/directory properties and content with audit-fs",
+  "private": true,
+  "version": "0.1.0",
+  "main": "index.js",
+  "keywords": [
+    "gruntplugin"
+  ],
+  "contributors": [
+    {
+      "name": "David Smith",
+      "web": "https://github.com/codeactual/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/codeactual/grunt-auditfs/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeactual/grunt-auditfs.git"
+  },
+  "dependencies": {
+    "intersect": "0.0.3",
+    "uniq": "0.0.2",
+    "shelljs": "~0.1.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {
+    "chai": "~1.6.0",
+    "component": "~0.16.0",
+    "apidox": "~0.3.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-horde": "~0.3.0",
+    "grunt-shell": "~0.2.1",
+    "mocha": "~1.10.0",
+    "sinon": "~1.7.2",
+    "sinon-chai": "~2.4.0",
+    "sinon-doublist": "~0.4.1",
+    "node-component-grunt": "git://github.com/codeactual/node-component-grunt.git",
+    "node-lib-grunt": "git://github.com/codeactual/node-lib-grunt.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "gitemplate": {
+    "originSha": "1f2638f3d2",
+    "originUrl": "/var/dev/gitemplate-grunt-task/.git"
+  }
+}

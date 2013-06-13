@@ -22,7 +22,7 @@
     "url": "https://github.com/codeactual/grunt-auditfs.git"
   },
   "dependencies": {
-    "audit-fs": "~0.2.0"
+    "audit-fs": "~0.3.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"

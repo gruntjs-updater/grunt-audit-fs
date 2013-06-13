@@ -1,8 +1,8 @@
-# grunt-auditfs
+# grunt-audit-fs
 
 Verify build file/directory properties and content with audit-fs
 
-[![Build Status](https://travis-ci.org/codeactual/grunt-auditfs.png)](https://travis-ci.org/codeactual/grunt-auditfs)
+[![Build Status](https://travis-ci.org/codeactual/grunt-audit-fs.png)](https://travis-ci.org/codeactual/grunt-audit-fs)
 
 ## Example
 
@@ -13,12 +13,12 @@ grunt.registerTask('audit-min-js', ['audit-fs:maxSize:build/js/all.min.js:102400
 
 ## Installation
 
-### [NPM](https://npmjs.org/package/grunt-auditfs)
+### [NPM](https://npmjs.org/package/grunt-audit-fs)
 
-    npm install grunt-auditfs
+    npm install grunt-audit-fs
 
 ```js
-    grunt.loadNpmTasks('grunt-auditfs');
+    grunt.loadNpmTasks('grunt-audit-fs');
 ```
 
 ## API

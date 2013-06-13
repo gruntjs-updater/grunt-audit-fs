@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   require('grunt-horde')
     .create(grunt)
     .demand('initConfig.projName', 'grunt-audit-fs')
-    .demand('initConfig.klassName', 'auditfs')
+    .demand('initConfig.klassName', 'audit-fs')
     .demand('initConfig.instanceName', 'gruntAuditFs')
     .loot('node-component-grunt')
     .loot('node-lib-grunt')

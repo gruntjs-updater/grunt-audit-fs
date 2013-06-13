@@ -14,7 +14,7 @@ var lib = require('../../..');
 
 require('sinon-doublist')(sinon, 'mocha');
 
-describe('grunt-auditfs', function() {
+describe('grunt-audit-fs', function() {
   'use strict';
 
   beforeEach(function() {

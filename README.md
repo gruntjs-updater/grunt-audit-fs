@@ -4,9 +4,9 @@ Verify build file/directory properties and content with [audit-fs](https://githu
 
 [![Build Status](https://travis-ci.org/codeactual/grunt-audit-fs.png)](https://travis-ci.org/codeactual/grunt-audit-fs)
 
-## Example: enforce a maximum file size of `100k` for `all.min.js`
+## Example
 
-Arguments are proxied without modification to `audit-fs`.
+Intent: enforce a maximum file size of `100k` for `build/js/all.min.js`.
 
 ### Single-task
 

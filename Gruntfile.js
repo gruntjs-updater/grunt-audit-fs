@@ -8,5 +8,6 @@ module.exports = function(grunt) {
     .demand('initConfig.instanceName', 'gruntAuditFs')
     .loot('node-component-grunt')
     .loot('node-lib-grunt')
+    .loot('./config/grunt')
     .attack();
 };

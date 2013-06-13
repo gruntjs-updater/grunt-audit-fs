@@ -47,11 +47,6 @@ On pass (with `--verbose`):
 ```js
     grunt.loadNpmTasks('grunt-audit-fs');
 ```
-
-## API
-
-[Documentation](docs/audit-fs.md)
-
 ## License
 
   MIT

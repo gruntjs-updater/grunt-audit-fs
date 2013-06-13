@@ -18,8 +18,6 @@ describe('grunt-audit-fs', function() {
   'use strict';
 
   beforeEach(function() {
-    var self = this;
-
     var auditFsModule = require('audit-fs');
     var audit = auditFsModule.create();
     this.auditStub = this.stub(audit);
@@ -33,25 +31,53 @@ describe('grunt-audit-fs', function() {
     this.size = 40;
     this.args = [this.name, this.size];
     this.log = sprintf('[audit-fs] result: %s(%s)', this.rule, this.args.join(', '));
-
-    this.context = {args: [this.rule].concat(this.args)};
-    this.task = new lib.create(grunt);
-    this.run = function() {
-      self.task.call(self.context);
-    };
   });
 
-  describe('#auditfs', function() {
+  describe('single task', function() {
+    beforeEach(function() {
+      var self = this;
+      this.singleContext = {args: [this.rule].concat(this.args)};
+      this.singleTask = new lib.single.create(grunt);
+      this.runSingle = function() {
+        self.singleTask.call(self.singleContext);
+      };
+    });
+
     it('should log pass', function() {
       this.auditStub.pass.returns(true);
-      this.run();
+      this.runSingle();
       this.auditStub.minSize.should.have.been.calledWithExactly(this.name, this.size);
       this.verboseWriteStub.should.have.been.calledWithExactly(this.log.replace('result', 'PASSED'));
     });
 
     it('should log fail', function() {
       this.auditStub.pass.returns(false);
-      this.run();
+      this.runSingle();
+      this.auditStub.minSize.should.have.been.calledWithExactly(this.name, this.size);
+      this.failWarnStub.should.have.been.calledWithExactly(this.log.replace('result', 'FAILED'));
+    });
+  });
+
+  describe('multi task', function() {
+    beforeEach(function() {
+      var self = this;
+      this.multiContext = {data: {rule: this.rule, args: this.args}};
+      this.multiTask = new lib.multi.create(grunt);
+      this.runMulti = function() {
+        self.multiTask.call(self.multiContext);
+      };
+    });
+
+    it('should log pass', function() {
+      this.auditStub.pass.returns(true);
+      this.runMulti();
+      this.auditStub.minSize.should.have.been.calledWithExactly(this.name, this.size);
+      this.verboseWriteStub.should.have.been.calledWithExactly(this.log.replace('result', 'PASSED'));
+    });
+
+    it('should log fail', function() {
+      this.auditStub.pass.returns(false);
+      this.runMulti();
       this.auditStub.minSize.should.have.been.calledWithExactly(this.name, this.size);
       this.failWarnStub.should.have.been.calledWithExactly(this.log.replace('result', 'FAILED'));
     });

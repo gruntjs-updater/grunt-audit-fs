@@ -12,6 +12,12 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'audit-fs',
     'Verify build file/directory properties and content with audit-fs',
-    require('../lib/grunt-audit-fs').create(grunt)
+    require('../lib/grunt-audit-fs/single').create(grunt)
+  );
+
+  grunt.registerMultiTask(
+    'audit-fs-multi',
+    'Verify build file/directory properties and content with audit-fs',
+    require('../lib/grunt-audit-fs/multi').create(grunt)
   );
 };

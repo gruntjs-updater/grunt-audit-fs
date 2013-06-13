@@ -1,7 +1,6 @@
 {
   "name": "grunt-audit-fs",
   "description": "Verify build file/directory properties and content with audit-fs",
-  "private": true,
   "version": "0.1.0",
   "main": "index.js",
   "keywords": [

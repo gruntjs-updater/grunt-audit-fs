@@ -22,9 +22,7 @@
     "url": "https://github.com/codeactual/grunt-auditfs.git"
   },
   "dependencies": {
-    "intersect": "0.0.3",
-    "uniq": "0.0.2",
-    "shelljs": "~0.1.4"
+    "audit-fs": "~0.2.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
@@ -43,7 +41,8 @@
     "sinon-chai": "~2.4.0",
     "sinon-doublist": "~0.4.1",
     "node-component-grunt": "git://github.com/codeactual/node-component-grunt.git",
-    "node-lib-grunt": "git://github.com/codeactual/node-lib-grunt.git"
+    "node-lib-grunt": "git://github.com/codeactual/node-lib-grunt.git",
+    "shelljs": "~0.1.4"
   },
   "scripts": {
     "test": "grunt test"

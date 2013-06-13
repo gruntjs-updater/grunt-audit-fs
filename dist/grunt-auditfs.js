@@ -109,37 +109,44 @@
             return typeof val;
         };
     });
-    require.register("component-each/index.js", function(exports, require, module) {
-        var type = require("type");
-        var has = Object.prototype.hasOwnProperty;
-        module.exports = function(obj, fn) {
+    require.register("component-clone/index.js", function(exports, require, module) {
+        var type;
+        try {
+            type = require("type");
+        } catch (e) {
+            type = require("type-component");
+        }
+        module.exports = clone;
+        function clone(obj) {
             switch (type(obj)) {
-              case "array":
-                return array(obj, fn);
-
               case "object":
-                if ("number" == typeof obj.length) return array(obj, fn);
-                return object(obj, fn);
-
-              case "string":
-                return string(obj, fn);
-            }
-        };
-        function string(obj, fn) {
-            for (var i = 0; i < obj.length; ++i) {
-                fn(obj.charAt(i), i);
-            }
-        }
-        function object(obj, fn) {
-            for (var key in obj) {
-                if (has.call(obj, key)) {
-                    fn(key, obj[key]);
+                var copy = {};
+                for (var key in obj) {
+                    if (obj.hasOwnProperty(key)) {
+                        copy[key] = clone(obj[key]);
+                    }
                 }
-            }
-        }
-        function array(obj, fn) {
-            for (var i = 0; i < obj.length; ++i) {
-                fn(obj[i], i);
+                return copy;
+
+              case "array":
+                var copy = new Array(obj.length);
+                for (var i = 0, l = obj.length; i < l; i++) {
+                    copy[i] = clone(obj[i]);
+                }
+                return copy;
+
+              case "regexp":
+                var flags = "";
+                flags += obj.multiline ? "m" : "";
+                flags += obj.global ? "g" : "";
+                flags += obj.ignoreCase ? "i" : "";
+                return new RegExp(obj.source, flags);
+
+              case "date":
+                return new Date(obj.getTime());
+
+              default:
+                return obj;
             }
         }
     });
@@ -148,9 +155,9 @@
             requireComponent: require
         };
     });
-    require.alias("component-each/index.js", "grunt-auditfs/deps/each/index.js");
-    require.alias("component-each/index.js", "each/index.js");
-    require.alias("component-type/index.js", "component-each/deps/type/index.js");
+    require.alias("component-clone/index.js", "grunt-auditfs/deps/clone/index.js");
+    require.alias("component-clone/index.js", "clone/index.js");
+    require.alias("component-type/index.js", "component-clone/deps/type/index.js");
     require.alias("grunt-auditfs/lib/component/main.js", "grunt-auditfs/index.js");
     if (typeof exports == "object") {
         module.exports = require("grunt-auditfs");

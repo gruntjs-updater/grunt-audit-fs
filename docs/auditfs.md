@@ -5,6 +5,7 @@ _Source: [lib/grunt-auditfs/index.js](../lib/grunt-auditfs/index.js)_
 <a name="tableofcontents"></a>
 
 - <a name="toc_exportscreate"></a><a name="toc_exports"></a>[exports.create](#exportscreate)
+- <a name="toc_exportsauditfs"></a>[exports.auditfs](#exportsauditfs)
 
 <a name="exports"></a>
 
@@ -22,15 +23,20 @@ grunt.registerTask(
 );
 ```
 
-**Expected `this.data` format:**
-
-- Each property is an object:
-  - `{string|array} src` `grunt.file.expand` patterns
-  - `{string|array} tasks` Ex. 'lint'.
-
 **Return:**
 
-`{function}`
+`{function}` [exports.auditfs](#exportsauditfs)
+
+<sub>Go: [TOC](#tableofcontents) | [exports](#toc_exports)</sub>
+
+# exports.auditfs()
+
+> auditfs task function.
+
+**Expected `this.args`:**
+
+- `0`: `audit-fs` rule name, ex. `minCount`
+- `1..`: Ex. `minCount` arguments `['./rel/path/to/dir', 5]`
 
 <sub>Go: [TOC](#tableofcontents) | [exports](#toc_exports)</sub>
 

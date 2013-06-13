@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "keywords": [],
   "dependencies": {
-    "component/each": "2b33467"
+    "component/clone": "0.1.0"
   },
   "main": "lib/component/main.js",
   "scripts": [

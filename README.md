@@ -36,7 +36,7 @@ On failure:
 
 On pass (with `--verbose`):
 
-    [audit-fs] FAILED: maxSize(build/js/all.min.js, 102400) Use --force to continue.
+    [audit-fs] PASSED: maxSize(build/js/all.min.js, 102400)
 
 ## Installation
 

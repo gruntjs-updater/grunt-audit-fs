@@ -1,6 +1,6 @@
 {
-  "name": "grunt-auditfs",
-  "repo": "codeactual/grunt-auditfs",
+  "name": "grunt-audit-fs",
+  "repo": "codeactual/grunt-audit-fs",
   "description": "Verify build file/directory properties and content with audit-fs",
   "version": "0.1.0",
   "keywords": [],

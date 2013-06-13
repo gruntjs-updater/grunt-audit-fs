@@ -150,22 +150,22 @@
             }
         }
     });
-    require.register("grunt-auditfs/lib/component/main.js", function(exports, require, module) {
+    require.register("grunt-audit-fs/lib/component/main.js", function(exports, require, module) {
         module.exports = {
             requireComponent: require
         };
     });
-    require.alias("component-clone/index.js", "grunt-auditfs/deps/clone/index.js");
+    require.alias("component-clone/index.js", "grunt-audit-fs/deps/clone/index.js");
     require.alias("component-clone/index.js", "clone/index.js");
     require.alias("component-type/index.js", "component-clone/deps/type/index.js");
-    require.alias("grunt-auditfs/lib/component/main.js", "grunt-auditfs/index.js");
+    require.alias("grunt-audit-fs/lib/component/main.js", "grunt-audit-fs/index.js");
     if (typeof exports == "object") {
-        module.exports = require("grunt-auditfs");
+        module.exports = require("grunt-audit-fs");
     } else if (typeof define == "function" && define.amd) {
         define(function() {
-            return require("grunt-auditfs");
+            return require("grunt-audit-fs");
         });
     } else {
-        this["gruntAuditFs"] = require("grunt-auditfs");
+        this["gruntAuditFs"] = require("grunt-audit-fs");
     }
 })();

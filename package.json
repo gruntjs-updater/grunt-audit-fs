@@ -1,5 +1,5 @@
 {
-  "name": "grunt-auditfs",
+  "name": "grunt-audit-fs",
   "description": "Verify build file/directory properties and content with audit-fs",
   "private": true,
   "version": "0.1.0",
@@ -14,12 +14,12 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/codeactual/grunt-auditfs/issues"
+    "url": "https://github.com/codeactual/grunt-audit-fs/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codeactual/grunt-auditfs.git"
+    "url": "https://github.com/codeactual/grunt-audit-fs.git"
   },
   "dependencies": {
     "audit-fs": "~0.3.0"

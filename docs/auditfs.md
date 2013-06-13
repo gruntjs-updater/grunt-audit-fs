@@ -1,6 +1,6 @@
 Verify build file/directory properties and content with audit-fs
 
-_Source: [lib/grunt-auditfs/index.js](../lib/grunt-auditfs/index.js)_
+_Source: [lib/grunt-audit-fs/index.js](../lib/grunt-audit-fs/index.js)_
 
 <a name="tableofcontents"></a>
 
@@ -19,7 +19,7 @@ _Source: [lib/grunt-auditfs/index.js](../lib/grunt-auditfs/index.js)_
 grunt.registerTask(
   'auditfs',
   'Verify build file/directory properties and content with audit-fs',
-  require('../lib/grunt-auditfs').create(grunt)
+  require('../lib/grunt-audit-fs').create(grunt)
 );
 ```
 

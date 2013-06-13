@@ -10,8 +10,8 @@
 
 module.exports = function(grunt) {
   grunt.registerTask(
-    'auditfs',
+    'audit-fs',
     'Verify build file/directory properties and content with audit-fs',
-    require('../lib/grunt-auditfs').create(grunt)
+    require('../lib/grunt-audit-fs').create(grunt)
   );
 };

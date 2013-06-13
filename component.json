@@ -3,7 +3,13 @@
   "repo": "codeactual/grunt-audit-fs",
   "description": "Verify build file/directory properties and content with audit-fs",
   "version": "0.1.0",
-  "keywords": [],
+  "keywords": [
+    "gruntplugin",
+    "filesystem",
+    "files",
+    "directories",
+    "test"
+  ],
   "dependencies": {
     "component/clone": "0.1.0"
   },

@@ -4,7 +4,11 @@
   "version": "0.1.0",
   "main": "index.js",
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "filesystem",
+    "files",
+    "directories",
+    "test"
   ],
   "contributors": [
     {

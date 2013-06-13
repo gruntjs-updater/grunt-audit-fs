@@ -50,7 +50,7 @@ On pass (with `--verbose`):
 
 ## API
 
-[Documentation](docs/auditfs.md)
+[Documentation](docs/audit-fs.md)
 
 ## License
 

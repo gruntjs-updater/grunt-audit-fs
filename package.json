@@ -54,5 +54,8 @@
     "originSha": "1f2638f3d2",
     "originUrl": "/var/dev/gitemplate-grunt-task/.git"
   },
-  "author": "David Smith <codeactual@gmail.com>"
+  "author": "David Smith <codeactual@gmail.com>",
+  "devdir-ci": {
+    "version": 1
+  }
 }
